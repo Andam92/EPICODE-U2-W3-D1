@@ -28,11 +28,7 @@ loginButton.onclick = function () {
   tabellaUtenti.innerHTML = `<table>
   <tr>
   <td>${nuovoUtente.nome}</td>
-  </tr>
-  <tr>
   <td>${nuovoUtente.cognome}</td>
-  </tr>
-  <tr>
   <td>${nuovoUtente.data}</td>
   </tr>
   </table>`;
