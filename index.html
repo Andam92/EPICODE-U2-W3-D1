@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOP 1 Homerwork</title>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 50px;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Form semplice con registrazione in una tabella</h1>
+    <form action="">
+      <input id="nome" type="text" placeholder="nome" />
+      <input id="cognome" type="text" placeholder="cognome" />
+      <input id="data" type="date" placeholder="data" />
+      <button id="login_button" type="button">REGISTRATI</button>
+    </form>
+    <table>
+      <tr>
+        <th>Nome</th>
+        <th>Cognome</th>
+        <th>Data</th>
+      </tr>
+      <tr id="riga1"></tr>
+      <tr id="riga2"></tr>
+      <tr id="riga3"></tr>
+    </table>
+    <div id="prova"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
