@@ -20,16 +20,31 @@ console.log(esempioUtente);
 
 // Creo la funzione che registra i valori del form
 loginButton.onclick = function () {
+  // nuovoUtente è l'oggetto creato dal costruttore, conterrà le variabili del form
   let nuovoUtente = new Utente(
     nomeUtente.value,
     cognomeUtente.value,
     dataUtente.value
   );
-  tabellaUtenti.innerHTML = `<table>
+  // 1° METODO -> template literal per creare la tabella con le variabili
+  /* tabellaUtenti.innerHTML = `<table> 
   <tr>
   <td>${nuovoUtente.nome}</td>
   <td>${nuovoUtente.cognome}</td>
   <td>${nuovoUtente.data}</td>
   </tr>
-  </table>`;
+  </table>`; */
+
+  // 2° METODO -> usare metodi createElement, createTextNode e appendChild per creare nuove linee di tabella in HTML
+  let newRow = document.createElement("tr");
+  let node = document.createTextNode(
+    `Il nome dell'utente è: ${nuovoUtente.nome}` +
+      ` ` +
+      `Il cognome dell'utente è: ${nuovoUtente.cognome}` +
+      ` ` +
+      `La data di nascita dell'utente è: ${nuovoUtente.data}`
+  );
+  newRow.appendChild(node);
+  let datiUtente = document.getElementById("tabella");
+  datiUtente.appendChild(newRow);
 };
